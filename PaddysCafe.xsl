@@ -6,7 +6,7 @@
             <title>Paddy's Cafe Menu</title>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <link rel="stylesheet" href="css/PaddysCafe.css" />
-            <script type="text/javascript" src="js/PaddysCafe.js">x</script>
+            <script type="text/javascript" src="js/PaddysCafe.js" />
         </head>
             <body>
                 <h2>
