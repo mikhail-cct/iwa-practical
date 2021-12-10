@@ -57,24 +57,24 @@ router.post('/post/json', function(req, res) {
 
         console.log(JSON.stringify(obj, null, " "))
 
-        // XMLtoJSON('PaddysCafe.xml', function (err, result){
-        //     if (err) throw (err);
+        XMLtoJSON('PaddysCafe.xml', function (err, result){
+            if (err) throw (err);
 
-        //     result.menu.section[obj.sec_n].entry.push({'item': obj.item, 'price': obj.price});
+            result.menu.section[obj.sec_n].entry.push({'item': obj.item, 'price': obj.price});
 
-        //     console.log(JSON.stringify(result, null, " "));
+            console.log(JSON.stringify(result, null, " "));
 
-        //     JSONtoXML('PaddysCafe.xml', result, function(err){
-        //         if (err) console.log(err);
-        //     });
+            JSONtoXML('PaddysCafe.xml', result, function(err){
+                if (err) console.log(err);
+            });
 
-        // });
+        });
 
     };
 
     appendJSON(req.body);
 
-    // res.redirect('back');
+    res.redirect('back');
 
 });
 

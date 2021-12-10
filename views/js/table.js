@@ -21,7 +21,7 @@ function append(){
         url: '/post/json',
         dataType: 'json',
         contentType: 'application/json',
-        data: '{"sec_n": "0", "item":"Coffee", "price":"3"}',
+        data: '{"sec_n": "' + $("#section").val() + '", "item":"' + $("#item").val() + '", "price":"' + $("#price").val() + '"}',
         async: false,
         success: draw_table()
     })
