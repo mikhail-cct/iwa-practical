@@ -14,6 +14,20 @@ function draw_table(){
     $.getHTMLuncached("/get/html");
 }
 
+
+function append(){
+    $.ajax({
+        type: "POST",
+        url: '/post/json',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: '{"sec_n": "0", "item":"Coffee", "price":"3"}',
+        async: false,
+        success: draw_table()
+    })
+};
+
+
 $(document).ready(function(){
     draw_table();
 })
