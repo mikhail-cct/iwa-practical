@@ -23,7 +23,7 @@ function append(){
         contentType: 'application/json',
         data: '{"sec_n": "' + $("#section").val() + '", "item":"' + $("#item").val() + '", "price":"' + $("#price").val() + '"}',
         async: false,
-        success: draw_table()
+        success: setTimeout(draw_table, 1000)
     })
 };
 
